@@ -77,7 +77,7 @@ class CSVTabbedLangCopierApp:
 
 # ----------------------------------------------------------------------------
 
-# Handles the button creation =-----------------------------------------------
+# Handles the button creation and field preview =-------------------------------------------------
 
     def create_copy_button(self, key, value, container):
         frame = tk.Frame(container)
@@ -86,18 +86,18 @@ class CSVTabbedLangCopierApp:
         label = tk.Label(frame, text=key, width=50, anchor='w', justify='left', wraplength=400)
         label.pack(side='left', padx=(0, 5))
 
-        button = tk.Button(
-            frame,
-            text="Copy",
-            width=8,
-            bg='SystemButtonFace'
-        )
+        # Preview snippet (first 20 chars, add ellipsis if longer)
+        preview_text = (value[:50] + "…") if len(value) > 50 else value
+        preview_label = tk.Label(frame, text=preview_text, width=50, anchor='w', fg='gray', font=("Arial", 9, "italic"))
+        preview_label.pack(side='left', padx=(0, 5))
+
+        button = tk.Button(frame, text="Copy", width=8, bg="SystemButtonFace")
         button.config(command=lambda v=value, b=button: self.copy_to_clipboard(v, b))
         button.pack(side='left')
 
-# ----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------
 
-# Handles copying the field =-------------------------------------------------
+# Handles copying the field =------------------------------------------------------------
 
     def copy_to_clipboard(self, value, button):
         pyperclip.copy(value)
@@ -109,7 +109,7 @@ class CSVTabbedLangCopierApp:
         # Revert after 2 seconds
         button.after(2000, lambda: button.config(text=original_text, bg=original_color))
 
-# ----------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------
 if __name__ == "__main__":
     root = tk.Tk()
     app = CSVTabbedLangCopierApp(root)
