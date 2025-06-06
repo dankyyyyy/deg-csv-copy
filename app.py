@@ -23,10 +23,10 @@ class CSVTabbedLangCopierApp:
 
         # Open CSV Button
         open_button = tk.Button(root, text="Open CSV File", command=self.open_file)
-        open_button.grid(in_=self.container, row=0, column=0, sticky='ew', pady=5)
+        open_button.grid(in_=self.container, row=0, column=0, pady=5)
 
         # Filename label
-        self.filename_label = tk.Label(root, text="", anchor='w', fg='gray')
+        self.filename_label = tk.Label(root, text="", anchor='center', fg='gray')
         self.filename_label.grid(in_=self.container, row=1, column=0, sticky='ew', pady=5)
 
         # Notebook for languages
@@ -85,11 +85,11 @@ class CSVTabbedLangCopierApp:
         scrollbar.grid(row=0, column=1, sticky="ns")
 
         tab.grid_rowconfigure(0, weight=1)
-        tab.grid_columnconfigure(0, weight=1)
+        tab.grid_columnconfigure(0, weight=1, minsize=560)
 
         scrollable_frame = ttk.Frame(canvas)
 
-        scrollable_window = canvas.create_window((0, 0), window=scrollable_frame, anchor='nw')
+        scrollable_window = canvas.create_window((0, 0), window=scrollable_frame, anchor='center')
 
         def update_scrollregion(event=None):
             canvas.configure(scrollregion=canvas.bbox("all"))
