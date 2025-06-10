@@ -4,9 +4,9 @@
   
   1.1 Python 3.1x
 
-    You can install the latest version of **Python** for your operating system from their official website: https://www.python.org/downloads/
+    You can install the latest version of Python for your operating system from their official website: https://www.python.org/downloads/
 
-    You can check that **Python** is installed by running one of the following commands in Command Prompt (Windows)/Terminal(MacOS & Linux):
+    You can check that Python is installed by running one of the following commands in Command Prompt (Windows)/Terminal(MacOS & Linux):
 
     python --version
   
@@ -18,7 +18,7 @@
     
     This Python module handles copy and paste functionalities. The official website: https://pypi.org/project/pyperclip/
 
-    After you have installed **Python**, you can run one of the following commands in Command Prompt (Windows)/Terminal(MacOS & Linux) to install **Pyperclip**:
+    After you have installed Python, you can run one of the following commands in Command Prompt (Windows)/Terminal(MacOS & Linux) to install Pyperclip:
 
     pip install pyperclip
 
