@@ -10,7 +10,7 @@ LANGUAGES = ["English", "German", "French", "Danish"]
 class CSVTabbedLangCopierApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("CSV Multi-Language Copier")
+        self.root.title("DEG CSV Copier")
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(2, weight=1)
 
