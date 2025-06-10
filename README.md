@@ -1,6 +1,7 @@
 **Getting started**
 
 **1. Pre-requisites**
+  
   1.1 Python 3.1x
 
     You can install the latest version of **Python** for your operating system from their official website: https://www.python.org/downloads/
