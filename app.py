@@ -5,7 +5,7 @@ from tkinter import ttk, filedialog, messagebox
 import csv
 import pyperclip
 
-LANGUAGES = ["English", "French", "German", "Danish"]
+LANGUAGES = ["English", "French", "German", "Spanish"]
 
 class CSVTabbedLangCopierApp:
     def __init__(self, root):
